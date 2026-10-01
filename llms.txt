@@ -1,0 +1,8 @@
+# Crypto Front Page
+
+> Crypto Front Page reports news on Bitcoin, Ethereum, stablecoins, exchanges, DeFi protocols, regulation and network upgrades across the crypto industry.
+
+## Key pages
+- [Homepage](https://cryptonewsnetwork.github.io/): latest reporting and analysis.
+- [About](https://cryptonewsnetwork.github.io/about/): editorial scope, independence, sourcing and corrections.
+- [Archive](https://cryptonewsnetwork.github.io/archive/): everything published.
