@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en-GB" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross-Chain Message Gas: How Destination Fees Are Reserved</title>
+<meta name="description" content="A cross-chain message carries a destination gas budget; the protocol prices that work, subtracts a reserve from swap output, then broadcasts the call.">
+<link rel="canonical" href="https://cryptonewsnetwork.github.io/where-destination-gas-comes-from-in-a-cross-chain-message/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#faf7f0">
+<meta name="author" content="The Crypto Front Page Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Front Page">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Where Destination Gas Comes From in a Cross-Chain Message">
+<meta property="og:description" content="A cross-chain message carries a destination gas budget; the protocol prices that work, subtracts a reserve from swap output, then broadcasts the call.">
+<meta property="og:url" content="https://cryptonewsnetwork.github.io/where-destination-gas-comes-from-in-a-cross-chain-message/">
+<meta property="og:image" content="https://cryptonewsnetwork.github.io/assets/covers/where-destination-gas-comes-from-in-a-cross-chain-message-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Where Destination Gas Comes From in a Cross-Chain Message"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Where Destination Gas Comes From in a Cross-Chain Message">
+<meta name="twitter:description" content="A cross-chain message carries a destination gas budget; the protocol prices that work, subtracts a reserve from swap output, then broadcasts the call.">
+<meta property="article:published_time" content="2026-10-04T03:55:06+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Azeret+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/scb93f9a0ec.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Front Page" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptonewsnetwork.github.io/#org",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptonewsnetwork.github.io/#website",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "inLanguage": "en-GB",
+      "description": "Crypto Front Page reports news on Bitcoin, Ethereum, stablecoins, exchanges, DeFi protocols, regulation and network upgrades across the crypto industry."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptonewsnetwork.github.io/where-destination-gas-comes-from-in-a-cross-chain-message/#webpage",
+      "url": "https://cryptonewsnetwork.github.io/where-destination-gas-comes-from-in-a-cross-chain-message/",
+      "name": "Cross-Chain Message Gas: How Destination Fees Are Reserved",
+      "isPartOf": {
+        "@id": "https://cryptonewsnetwork.github.io/#website"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptonewsnetwork.github.io/where-destination-gas-comes-from-in-a-cross-chain-message/#article",
+      "headline": "Where Destination Gas Comes From in a Cross-Chain Message",
+      "isAccessibleForFree": true,
+      "description": "A cross-chain message carries a destination gas budget; the protocol prices that work, subtracts a reserve from swap output, then broadcasts the call.",
+      "datePublished": "2026-10-04T03:55:06+00:00",
+      "dateModified": "2026-10-04T03:55:06+00:00",
+      "url": "https://cryptonewsnetwork.github.io/where-destination-gas-comes-from-in-a-cross-chain-message/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptonewsnetwork.github.io/where-destination-gas-comes-from-in-a-cross-chain-message/#webpage"
+      },
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "wordCount": 675,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/where-destination-gas-comes-from-in-a-cross-chain-message-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/where-destination-gas-comes-from-in-a-cross-chain-message-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/where-destination-gas-comes-from-in-a-cross-chain-message-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptonewsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Where Destination Gas Comes From in a Cross-Chain Message",
+          "item": "https://cryptonewsnetwork.github.io/where-destination-gas-comes-from-in-a-cross-chain-message/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="se5d0494" href="#main">Jump to content</a>
+<header class="sff2168b">
+  <div class="s5edc9cb">
+    <div class="sb7af678">
+      <a class="see8b107" href="/">Crypto Front Page</a>
+      <p class="s05fe28a">Crypto networks, markets and policy</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<article class="sb8a55da">
+  <div class="s2370039">
+    <div class="s3d321e5 sa799cc4">
+      <h1 class="s5dae1f0 s1cab885">Where Destination Gas Comes From in a Cross-Chain Message</h1>
+<p class="s2ce9566">A cross-chain message carries a destination gas budget; the protocol prices that work, subtracts a reserve from swap output, then broadcasts the call.</p>      <p class="s9cb68e5 sd697aad"><span class="s2782290">The Crypto Front Page Desk</span><time datetime="2026-10-04T03:55:06+00:00">Oct 4, 2026</time><span>4 min read</span></p>
+    </div>
+  </div>
+  <figure class="s2370039 sa12e211"><img fetchpriority="high" class="sa6e8c2f" src="/assets/covers/where-destination-gas-comes-from-in-a-cross-chain-message.jpg" alt="Where Destination Gas Comes From in a Cross-Chain Message"></figure>
+  <div class="s2370039 sce9d8ea">
+    <div class="s3d321e5">
+      <div class="sb383994"><p>A cross-chain message gets its destination gas reserved by setting a budget for the work on the receiving chain, then deducting an estimated fee from the swap output before the protocol broadcasts the call. The budget describes the execution resources requested; the reserve is the amount of destination asset set aside to pay for them. Those are related, but they are not the same thing.</p>
+
+<p>In Chainflip, the message travels with a swap and tells a receiver contract or program what to do with the output. For example, the receiving program might use the swapped asset in another transaction. The source-chain deposit pays its own network fee separately; the destination reserve covers the later transaction that delivers the output and runs the requested logic.</p>
+
+<h2>What does the destination gas budget pay for?</h2>
+
+<p>The budget covers the receiver’s work on the destination chain, such as executing a contract call. The chain sets the unit: an EVM network measures gas, Solana uses compute units, and other networks may use a different resource measure. The message includes this requested budget when the swap is initiated.</p>
+
+<p>The protocol also needs resources to verify and deliver the cross-chain message. It adds that overhead on top of the requested budget, so the amount available for the receiver’s logic is not swallowed by the protocol’s own transaction work. A useful analogy is booking a room for a meeting: the request includes the meeting space, while the venue needs extra room to get everyone through the door.</p>
+
+<p>For a concrete example of the asset-conversion route, see <a href="https://albiekazt236124.madmouseblog.com/252825/how-to-swap-sol-for-usdc-with-chainflip" rel="noopener">how Chainflip swaps SOL for USDC</a>. The destination budget is a separate setting: it pays for the follow-on call, not for converting the source asset.</p>
+
+<h2>How does the protocol calculate and set the reserve?</h2>
+
+<p>At initiation, the swap request carries the destination, receiver, message data and gas budget. The protocol uses the destination chain’s fee model to estimate the cost of broadcasting the transaction with that work included. It then subtracts the estimated fee from the destination asset that would otherwise be paid out.</p>
+
+<p>The sequence is:</p>
+
+<ul>
+<li>The user or application supplies the message and requested destination budget with the swap details.</li>
+<li>The protocol adds its own transaction verification overhead to the requested work.</li>
+<li>It estimates the destination transaction cost and converts that cost into an amount of the destination asset.</li>
+<li>After the swap, the protocol deducts that amount from the output and broadcasts the transaction carrying the message.</li>
+</ul>
+
+<p>This is a fee reserve in the payout calculation, not a second deposit the user must make on the destination chain. The protocol handles the broadcast, while the recipient receives the output after the estimated fee is taken out. The amount therefore depends on both the requested work and the destination chain’s transaction costs; it is not a universal flat fee.</p>
+
+<h2>What can make the reserve too small or too large?</h2>
+
+<p>The requested budget has to match the receiver’s actual logic. If it is too low, the destination transaction may not have enough resources to complete that logic. If it is higher than the call needs, the estimate can reserve more output than a smaller budget would. The application developer must know what the receiver does and choose a budget that gives it room to finish.</p>
+
+<p>Costs also depend on the destination chain’s fee rules. EVM gas, Solana compute units and message-based fees are not interchangeable, so a budget for one destination cannot simply be carried over to another. The asset price and network conditions can also affect how much destination asset corresponds to the estimated transaction cost when the protocol calculates the deduction.</p>
+
+<p>When reviewing a swap, check the destination, the receiver’s expected work, the requested budget and the output after fees. A simple transfer and a call that runs contract logic have different resource needs. The mechanism turns that extra work into a reduction in the payout before broadcast: the message gets a funded path to execution, and the next thing to watch is whether the selected budget still fits the receiver and destination chain.</p></div>
+    </div>
+  </div>
+  <aside class="s2370039 s6d8a995">
+    <div class="s3d321e5 s9cfda61">
+      <h2 class="s24fad11">Related stories</h2>
+      <ul class="s17e86a8">
+<li><h3 class="s5dae1f0 s175402a"><a href="/what-to-do-when-an-ethereum-swap-is-pending/">What to Do When an Ethereum Swap Is Pending</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/why-a-failed-chainflip-payout-can-still-be-recovered/">Why a Failed Chainflip Payout Can Still Be Recovered</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/compare-impermanent-loss-with-fees-before-adding-liquidity/">Compare impermanent loss with fees before adding liquidity</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/sec-grants-conditional-path-for-tokenized-stock-trading/">SEC grants conditional path for tokenized stock trading</a></h3></li>      </ul>
+    </div>
+  </aside>
+</article>
+</main>
+
+<footer class="s7c6a81e">
+  <div class="s1805555">
+    <div class="sc1da3b2">
+      <p class="s164cbde">Crypto Front Page</p>
+      <nav class="sbcc75a4" aria-label="Site">
+        <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About us</a></li><li><a href="/privacy/">Privacy</a></li>        </ul>
+      </nav>
+    </div>
+    <p class="s71cd903">Editorially independent. This is not financial advice.</p>
+    <p class="s2f02081">© 2026 Crypto Front Page</p>
+  </div>
+</footer>
+</body>
+</html>
