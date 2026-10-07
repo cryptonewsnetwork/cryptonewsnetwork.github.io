@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://cryptonewsnetwork.github.io/</loc><lastmod>2026-10-06</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://cryptonewsnetwork.github.io/</loc><lastmod>2026-10-07</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://cryptonewsnetwork.github.io/arbswap-and-impermanent-loss-how-pair-prices-diverge/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://cryptonewsnetwork.github.io/fairshake-backs-32-house-candidates-after-crypto-bill-stalls/</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://cryptonewsnetwork.github.io/aibai-and-the-mechanics-of-a-first-crypto-transfer-between-chains/</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://cryptonewsnetwork.github.io/sec-approves-cboe-listing-of-3x-bitcoin-and-ether-funds/</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -27,10 +28,10 @@
 <url><loc>https://cryptonewsnetwork.github.io/sec-proposes-custody-framework-for-advisers-and-funds/</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://cryptonewsnetwork.github.io/how-to-finish-a-fermi-swap-after-a-failed-attempt/</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://cryptonewsnetwork.github.io/base-cobalt-upgrade-adds-conditional-transactions-and-b20-controls/</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://cryptonewsnetwork.github.io/archive/</loc><lastmod>2026-10-06</lastmod><priority>0.3</priority></url>
+<url><loc>https://cryptonewsnetwork.github.io/archive/</loc><lastmod>2026-10-07</lastmod><priority>0.3</priority></url>
 <url><loc>https://cryptonewsnetwork.github.io/about/</loc><lastmod>2026-10-01</lastmod><priority>0.3</priority></url>
 <url><loc>https://cryptonewsnetwork.github.io/privacy/</loc><lastmod>2026-10-01</lastmod><priority>0.3</priority></url>
 <url><loc>https://cryptonewsnetwork.github.io/editorial-policy/</loc><lastmod>2026-10-01</lastmod><priority>0.3</priority></url>
-<url><loc>https://cryptonewsnetwork.github.io/page/2/</loc><lastmod>2026-10-06</lastmod><changefreq>weekly</changefreq><priority>0.2</priority></url>
-<url><loc>https://cryptonewsnetwork.github.io/page/3/</loc><lastmod>2026-10-06</lastmod><changefreq>weekly</changefreq><priority>0.2</priority></url>
+<url><loc>https://cryptonewsnetwork.github.io/page/2/</loc><lastmod>2026-10-07</lastmod><changefreq>weekly</changefreq><priority>0.2</priority></url>
+<url><loc>https://cryptonewsnetwork.github.io/page/3/</loc><lastmod>2026-10-07</lastmod><changefreq>weekly</changefreq><priority>0.2</priority></url>
 </urlset>
