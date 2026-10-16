@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en-GB" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deploy a Mantle smart account with bridge funds</title>
+<meta name="description" content="A Mantle smart account can receive bridge funds before its contract exists, but deployment, gas payment and the bridge recipient must line up on Mantle.">
+<link rel="canonical" href="https://cryptonewsnetwork.github.io/bridge-funds-first-then-deploy-a-smart-account-on-mantle/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#faf7f0">
+<meta name="author" content="The Crypto Front Page Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Front Page">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Bridge funds first, then deploy a smart account on Mantle">
+<meta property="og:description" content="A Mantle smart account can receive bridge funds before its contract exists, but deployment, gas payment and the bridge recipient must line up on Mantle.">
+<meta property="og:url" content="https://cryptonewsnetwork.github.io/bridge-funds-first-then-deploy-a-smart-account-on-mantle/">
+<meta property="og:image" content="https://cryptonewsnetwork.github.io/assets/covers/bridge-funds-first-then-deploy-a-smart-account-on-mantle-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bridge funds first, then deploy a smart account on Mantle"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bridge funds first, then deploy a smart account on Mantle">
+<meta name="twitter:description" content="A Mantle smart account can receive bridge funds before its contract exists, but deployment, gas payment and the bridge recipient must line up on Mantle.">
+<meta property="article:published_time" content="2026-10-16T22:02:21+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Azeret+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/scb93f9a0ec.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Front Page" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptonewsnetwork.github.io/#org",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptonewsnetwork.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptonewsnetwork.github.io/#website",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "inLanguage": "en-GB",
+      "description": "Crypto Front Page reports news on Bitcoin, Ethereum, stablecoins, exchanges, DeFi protocols, regulation and network upgrades across the crypto industry."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptonewsnetwork.github.io/bridge-funds-first-then-deploy-a-smart-account-on-mantle/#webpage",
+      "url": "https://cryptonewsnetwork.github.io/bridge-funds-first-then-deploy-a-smart-account-on-mantle/",
+      "name": "Deploy a Mantle smart account with bridge funds",
+      "isPartOf": {
+        "@id": "https://cryptonewsnetwork.github.io/#website"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptonewsnetwork.github.io/bridge-funds-first-then-deploy-a-smart-account-on-mantle/#article",
+      "headline": "Bridge funds first, then deploy a smart account on Mantle",
+      "isAccessibleForFree": true,
+      "description": "A Mantle smart account can receive bridge funds before its contract exists, but deployment, gas payment and the bridge recipient must line up on Mantle.",
+      "datePublished": "2026-10-16T22:02:21+00:00",
+      "dateModified": "2026-10-16T22:02:21+00:00",
+      "url": "https://cryptonewsnetwork.github.io/bridge-funds-first-then-deploy-a-smart-account-on-mantle/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptonewsnetwork.github.io/bridge-funds-first-then-deploy-a-smart-account-on-mantle/#webpage"
+      },
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "wordCount": 592,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/bridge-funds-first-then-deploy-a-smart-account-on-mantle-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/bridge-funds-first-then-deploy-a-smart-account-on-mantle-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/bridge-funds-first-then-deploy-a-smart-account-on-mantle-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptonewsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bridge funds first, then deploy a smart account on Mantle",
+          "item": "https://cryptonewsnetwork.github.io/bridge-funds-first-then-deploy-a-smart-account-on-mantle/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="se5d0494" href="#main">Jump to content</a>
+<header class="sff2168b">
+  <div class="s5edc9cb">
+    <div class="sb7af678">
+      <a class="see8b107" href="/">Crypto Front Page</a>
+      <p class="s05fe28a">Crypto networks, markets and policy</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<article class="sb8a55da">
+  <div class="s2370039">
+    <div class="s3d321e5 sa799cc4">
+      <h1 class="s5dae1f0 s1cab885">Bridge funds first, then deploy a smart account on Mantle</h1>
+<p class="s2ce9566">A Mantle smart account can receive bridge funds before its contract exists, but deployment, gas payment and the bridge recipient must line up on Mantle.</p>      <p class="s9cb68e5 sd697aad"><span class="s2782290">The Crypto Front Page Desk</span><time datetime="2026-10-16T22:02:21+00:00">Oct 16, 2026 · 22:02 UTC</time><span>3 min read</span></p>
+    </div>
+  </div>
+  <figure class="s2370039 sa12e211"><img width="1200" height="630" fetchpriority="high" class="sa6e8c2f" src="/assets/covers/bridge-funds-first-then-deploy-a-smart-account-on-mantle.jpg" alt="Bridge funds first, then deploy a smart account on Mantle"></figure>
+  <div class="s2370039 sce9d8ea">
+    <div class="s3d321e5">
+      <div class="sb383994"><p>A smart account on Mantle can be funded through a bridge before its contract is deployed, provided the funds reach the account’s intended Mantle address. A wallet factory derives that address from the account’s setup, and a first transaction can deploy the contract there. The bridge moves assets between networks; it does not deploy the account. For the bridge steps and fee trade-offs, see this <a href="https://telegra.ph/Mantle-Bridge-Swap-Before-or-After-to-Save-Fees-10-14" rel="noopener">mantle bridge</a> guide.</p>
+
+<h2>How can bridge funds reach an account that is not deployed?</h2>
+<p>A smart account can have a known address before it has contract code. Many account systems calculate that address from the owner or signers, the chosen account implementation, and a factory’s deployment rules. On Mantle, the address can receive assets even while the contract is absent, much as a numbered mailbox can be assigned before it is installed.</p>
+<p>The important condition is that the address be calculated for the right network and account setup. A different factory, owner, implementation or configuration can produce a different address. Confirm the destination in the smart account wallet before bridging, and check that the bridge’s receiving-address field actually lets you send to it. Some bridge flows default to the connected source wallet’s address.</p>
+
+<h2>What happens when the smart account is deployed?</h2>
+<p>In a common ERC-4337 flow, the wallet prepares a signed user operation describing the action the account should take. If the account does not yet exist, the operation includes deployment data for a factory. A bundler checks the operation, then submits it through the chain’s EntryPoint contract. The factory creates the account, and the EntryPoint processes its requested action if validation succeeds.</p>
+<p>That first action could be a simple transfer or another supported call. Deployment and the first action can therefore happen in one operation, rather than requiring a separate manual deployment transaction. The account’s owner or configured signers authorize the operation; the factory supplies the code and creates the account at its derived address.</p>
+
+<h2>Should you bridge before or after deployment?</h2>
+<p>Bridging to the undeployed address can save a step: once funds arrive on Mantle, the first authorized operation can deploy the account and use them. But this depends on the bridge accepting that destination and the wallet and bundler supporting deployment on first use. Funds arriving at an address do not guarantee that every wallet interface can control or spend them.</p>
+<p>Bridging to an existing wallet first is easier to inspect, but it adds a transfer on Mantle from that wallet to the smart account. That transfer needs a signer-controlled account and enough network gas. In either route, plan for deployment and later transactions to pay network fees. A paymaster may sponsor fees when the wallet supports one and its conditions are met; that is a separate service, not a property of the bridge.</p>
+<ul>
+<li>Generate the account address using the exact wallet, owner and setup you intend to use on Mantle.</li>
+<li>Check whether the bridge can send to that address, and confirm the network and asset shown at the destination.</li>
+<li>Leave enough of the accepted fee asset for the first operation, unless a supported paymaster will cover it.</li>
+<li>After the bridge completes, verify the destination balance and account deployment status before signing the first operation.</li>
+</ul>
+<p>The order is simple: derive and verify the address, bridge to it if the route supports that recipient, then deploy through an authorized first operation. What changes at deployment is that the address gains executable account code; next, check that the bridge transfer settled and that the wallet can submit an operation with the available funds and fee setup.</p></div>
+    </div>
+  </div>
+  <aside class="s2370039 s6d8a995">
+    <div class="s3d321e5 s9cfda61">
+      <h2 class="s24fad11">Related stories</h2>
+      <ul class="s17e86a8">
+<li><h3 class="s5dae1f0 s175402a"><a href="/how-to-send-tokens-to-an-escrow-on-another-network/">How to Send Tokens to an Escrow on Another Network</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/why-mantle-bridge-transfers-can-fail-at-the-destination/">Why Mantle Bridge Transfers Can Fail at the Destination</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/how-a-treasury-can-fund-a-falling-health-factor/">How a treasury can fund a falling health factor</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/why-a-destination-chain-rejects-a-crypto-transfer/">Why a Destination Chain Rejects a Crypto Transfer</a></h3></li>      </ul>
+    </div>
+  </aside>
+</article>
+</main>
+
+<footer class="s7c6a81e">
+  <div class="s1805555">
+    <div class="sc1da3b2">
+      <p class="s164cbde">Crypto Front Page</p>
+      <nav class="sbcc75a4" aria-label="Site">
+        <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About us</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-policy/">Editorial policy</a></li>        </ul>
+      </nav>
+    </div>
+    <p class="s71cd903">Published for information only; not financial advice.</p>
+    <p class="s2f02081">© 2026 Crypto Front Page</p>
+  </div>
+</footer>
+</body>
+</html>
