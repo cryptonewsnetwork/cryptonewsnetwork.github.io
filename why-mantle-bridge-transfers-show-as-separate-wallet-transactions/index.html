@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en-GB" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mantle Bridge Wallet History: Deposits and Withdrawals</title>
+<meta name="description" content="Wallet history records each side of a bridge separately: the source-chain send, the destination-chain arrival, and any later withdrawal steps.">
+<link rel="canonical" href="https://cryptonewsnetwork.github.io/why-mantle-bridge-transfers-show-as-separate-wallet-transactions/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#faf7f0">
+<meta name="author" content="The Crypto Front Page Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Front Page">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Why Mantle Bridge Transfers Show as Separate Wallet Transactions">
+<meta property="og:description" content="Wallet history records each side of a bridge separately: the source-chain send, the destination-chain arrival, and any later withdrawal steps.">
+<meta property="og:url" content="https://cryptonewsnetwork.github.io/why-mantle-bridge-transfers-show-as-separate-wallet-transactions/">
+<meta property="og:image" content="https://cryptonewsnetwork.github.io/assets/covers/why-mantle-bridge-transfers-show-as-separate-wallet-transactions-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why Mantle Bridge Transfers Show as Separate Wallet Transactions"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Mantle Bridge Transfers Show as Separate Wallet Transactions">
+<meta name="twitter:description" content="Wallet history records each side of a bridge separately: the source-chain send, the destination-chain arrival, and any later withdrawal steps.">
+<meta property="article:published_time" content="2026-10-16T13:57:12+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Azeret+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/scb93f9a0ec.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Front Page" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptonewsnetwork.github.io/#org",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptonewsnetwork.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptonewsnetwork.github.io/#website",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "inLanguage": "en-GB",
+      "description": "Crypto Front Page reports news on Bitcoin, Ethereum, stablecoins, exchanges, DeFi protocols, regulation and network upgrades across the crypto industry."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptonewsnetwork.github.io/why-mantle-bridge-transfers-show-as-separate-wallet-transactions/#webpage",
+      "url": "https://cryptonewsnetwork.github.io/why-mantle-bridge-transfers-show-as-separate-wallet-transactions/",
+      "name": "Mantle Bridge Wallet History: Deposits and Withdrawals",
+      "isPartOf": {
+        "@id": "https://cryptonewsnetwork.github.io/#website"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptonewsnetwork.github.io/why-mantle-bridge-transfers-show-as-separate-wallet-transactions/#article",
+      "headline": "Why Mantle Bridge Transfers Show as Separate Wallet Transactions",
+      "isAccessibleForFree": true,
+      "description": "Wallet history records each side of a bridge separately: the source-chain send, the destination-chain arrival, and any later withdrawal steps.",
+      "datePublished": "2026-10-16T13:57:12+00:00",
+      "dateModified": "2026-10-16T13:57:12+00:00",
+      "url": "https://cryptonewsnetwork.github.io/why-mantle-bridge-transfers-show-as-separate-wallet-transactions/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptonewsnetwork.github.io/why-mantle-bridge-transfers-show-as-separate-wallet-transactions/#webpage"
+      },
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "wordCount": 646,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/why-mantle-bridge-transfers-show-as-separate-wallet-transactions-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/why-mantle-bridge-transfers-show-as-separate-wallet-transactions-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/why-mantle-bridge-transfers-show-as-separate-wallet-transactions-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptonewsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why Mantle Bridge Transfers Show as Separate Wallet Transactions",
+          "item": "https://cryptonewsnetwork.github.io/why-mantle-bridge-transfers-show-as-separate-wallet-transactions/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="se5d0494" href="#main">Jump to content</a>
+<header class="sff2168b">
+  <div class="s5edc9cb">
+    <div class="sb7af678">
+      <a class="see8b107" href="/">Crypto Front Page</a>
+      <p class="s05fe28a">Crypto networks, markets and policy</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<article class="sb8a55da">
+  <div class="s2370039">
+    <div class="s3d321e5 sa799cc4">
+      <h1 class="s5dae1f0 s1cab885">Why Mantle Bridge Transfers Show as Separate Wallet Transactions</h1>
+<p class="s2ce9566">Wallet history records each side of a bridge separately: the source-chain send, the destination-chain arrival, and any later withdrawal steps.</p>      <p class="s9cb68e5 sd697aad"><span class="s2782290">The Crypto Front Page Desk</span><time datetime="2026-10-16T13:57:12+00:00">Oct 16, 2026 · 13:57 UTC</time><span>4 min read</span></p>
+    </div>
+  </div>
+  <figure class="s2370039 sa12e211"><img width="1200" height="630" fetchpriority="high" class="sa6e8c2f" src="/assets/covers/why-mantle-bridge-transfers-show-as-separate-wallet-transactions.jpg" alt="Why Mantle Bridge Transfers Show as Separate Wallet Transactions"></figure>
+  <div class="s2370039 sce9d8ea">
+    <div class="s3d321e5">
+      <div class="sb383994"><p>A Mantle bridge transfer usually appears as separate transactions because the source and destination networks record different steps. For a deposit, your wallet sends tokens on the source chain, the bridge processes that deposit, and the tokens become available on Mantle. The wallet’s history is a record of transactions on each network, not one combined receipt for the whole journey.</p>
+
+<h2>Why does a deposit appear in more than one place?</h2>
+<p>A deposit can leave one record on the sending network and another on Mantle. First, the wallet submits a transaction on the source chain, often Ethereum, that transfers tokens to the bridge. That transaction has its own hash and status. After the bridge processes it, a corresponding credit is recorded on Mantle, where the wallet can show the received tokens or a related transaction.</p>
+<p>These records answer different questions: the source-chain transaction shows that you sent funds to the bridge; the Mantle-side record shows that the funds arrived. A wallet may show the first step as a contract interaction, while token balances or transfer details reveal the second. The <a href="https://proofdispatch.pages.dev/mantle-bridge-how-deposits-costs-and-withdrawals-work/" rel="noopener">mantle bridge</a> guide explains the deposit and withdrawal process in more detail. If the destination entry is not visible in the wallet’s default activity list, check that Mantle is selected and inspect the address on a Mantle block explorer.</p>
+
+<h2>What does a withdrawal look like in wallet history?</h2>
+<p>A withdrawal starts with a transaction on Mantle and may require a later transaction on Ethereum before the funds are available there. First, you submit the withdrawal from Mantle through the bridge. That transaction can show as successful on Mantle even though the process is not finished. The bridge then has to process the withdrawal according to its rules; completing the process can involve a waiting period and a separate finalization step on the destination chain.</p>
+<p>That means “successful” describes the transaction that the wallet sent, not necessarily the entire cross-chain transfer. A useful way to read the history is as a sequence of receipts: the Mantle transaction records the request, and a later Ethereum transaction records completion when required. The withdrawal may therefore have a different status on each network at the same time.</p>
+
+<h2>How can you match the wallet entries to the transfer?</h2>
+<p>Start with the network shown beside each history item. Then open the transaction details and compare the sending address, receiving address, token, and amount. A bridge transaction can include a contract call rather than a simple transfer directly to another personal wallet, so the wallet’s short description may not name every step.</p>
+<ul>
+<li><strong>Deposit:</strong> find the outgoing transaction on the source network, then look for the corresponding token credit on Mantle.</li>
+<li><strong>Withdrawal:</strong> find the withdrawal request on Mantle, then check for any required completion transaction on the destination network.</li>
+<li><strong>Pending or missing entry:</strong> check the transaction status on the network where it was submitted, and confirm the wallet is displaying the intended account and network.</li>
+<li><strong>Different amounts:</strong> compare the token and amounts in transaction details; fees or the particular transfer route can affect what arrives.</li>
+</ul>
+<p>A block explorer can help when a wallet groups, abbreviates, or omits bridge-related activity. Search using the transaction hash on the same network where it was submitted; a hash from one chain will not by itself show the full journey on another.</p>
+
+<h2>What should you take away from separate entries?</h2>
+<p>Separate wallet entries are a normal consequence of a bridge coordinating activity across networks. Each network records its own transaction, and the wallet presents those records as activity rather than as one cross-chain event. For most readers, the clearest check is to follow the transaction hash on the sending network, then verify the resulting credit or completion step on the receiving network. What changed is the asset’s location and the set of network records attached to it; what to watch next is the status of any step that remains pending.</p></div>
+    </div>
+  </div>
+  <aside class="s2370039 s6d8a995">
+    <div class="s3d321e5 s9cfda61">
+      <h2 class="s24fad11">Related stories</h2>
+      <ul class="s17e86a8">
+<li><h3 class="s5dae1f0 s175402a"><a href="/replenishing-collateral-after-a-network-migration/">Replenishing Collateral After a Network Migration</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/how-to-reconcile-cross-chain-treasury-transfers/">How to Reconcile Cross-Chain Treasury Transfers</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/how-partial-fills-meet-cross-chain-swap-minimums/">How Partial Fills Meet Cross-Chain Swap Minimums</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/when-a-sequencer-stops-mid-bridge/">When a Sequencer Stops Mid-Bridge</a></h3></li>      </ul>
+    </div>
+  </aside>
+</article>
+</main>
+
+<footer class="s7c6a81e">
+  <div class="s1805555">
+    <div class="sc1da3b2">
+      <p class="s164cbde">Crypto Front Page</p>
+      <nav class="sbcc75a4" aria-label="Site">
+        <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About us</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-policy/">Editorial policy</a></li>        </ul>
+      </nav>
+    </div>
+    <p class="s71cd903">Published for information only; not financial advice.</p>
+    <p class="s2f02081">© 2026 Crypto Front Page</p>
+  </div>
+</footer>
+</body>
+</html>
