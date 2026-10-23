@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en-GB" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zerofi routes: when cross-exchange and triangle paths fit</title>
+<meta name="description" content="zerofi routes separate cross-exchange transfers from three-trade loops, showing when each path fits and where fees, liquidity and transfer time change the result.">
+<link rel="canonical" href="https://cryptonewsnetwork.github.io/how-zerofi-routes-move-a-trade-from-quote-to-sale/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#faf7f0">
+<meta name="author" content="The Crypto Front Page Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Front Page">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="How zerofi routes move a trade from quote to sale">
+<meta property="og:description" content="zerofi routes separate cross-exchange transfers from three-trade loops, showing when each path fits and where fees, liquidity and transfer time change the result.">
+<meta property="og:url" content="https://cryptonewsnetwork.github.io/how-zerofi-routes-move-a-trade-from-quote-to-sale/">
+<meta property="og:image" content="https://cryptonewsnetwork.github.io/assets/covers/how-zerofi-routes-move-a-trade-from-quote-to-sale-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How zerofi routes move a trade from quote to sale"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How zerofi routes move a trade from quote to sale">
+<meta name="twitter:description" content="zerofi routes separate cross-exchange transfers from three-trade loops, showing when each path fits and where fees, liquidity and transfer time change the result.">
+<meta property="article:published_time" content="2026-10-23T15:15:05+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Azeret+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/scb93f9a0ec.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Front Page" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptonewsnetwork.github.io/#org",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptonewsnetwork.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptonewsnetwork.github.io/#website",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "inLanguage": "en-GB",
+      "description": "Crypto Front Page reports news on Bitcoin, Ethereum, stablecoins, exchanges, DeFi protocols, regulation and network upgrades across the crypto industry."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptonewsnetwork.github.io/how-zerofi-routes-move-a-trade-from-quote-to-sale/#webpage",
+      "url": "https://cryptonewsnetwork.github.io/how-zerofi-routes-move-a-trade-from-quote-to-sale/",
+      "name": "zerofi routes: when cross-exchange and triangle paths fit",
+      "isPartOf": {
+        "@id": "https://cryptonewsnetwork.github.io/#website"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptonewsnetwork.github.io/how-zerofi-routes-move-a-trade-from-quote-to-sale/#article",
+      "headline": "How zerofi routes move a trade from quote to sale",
+      "isAccessibleForFree": true,
+      "description": "zerofi routes separate cross-exchange transfers from three-trade loops, showing when each path fits and where fees, liquidity and transfer time change the result.",
+      "datePublished": "2026-10-23T15:15:05+00:00",
+      "dateModified": "2026-10-23T15:15:05+00:00",
+      "url": "https://cryptonewsnetwork.github.io/how-zerofi-routes-move-a-trade-from-quote-to-sale/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptonewsnetwork.github.io/how-zerofi-routes-move-a-trade-from-quote-to-sale/#webpage"
+      },
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "wordCount": 741,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/how-zerofi-routes-move-a-trade-from-quote-to-sale-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/how-zerofi-routes-move-a-trade-from-quote-to-sale-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/how-zerofi-routes-move-a-trade-from-quote-to-sale-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptonewsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How zerofi routes move a trade from quote to sale",
+          "item": "https://cryptonewsnetwork.github.io/how-zerofi-routes-move-a-trade-from-quote-to-sale/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="se5d0494" href="#main">Jump to content</a>
+<header class="sff2168b">
+  <div class="s5edc9cb">
+    <div class="sb7af678">
+      <a class="see8b107" href="/">Crypto Front Page</a>
+      <p class="s05fe28a">Crypto networks, markets and policy</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<article class="sb8a55da">
+  <div class="s2370039">
+    <div class="s3d321e5 sa799cc4">
+      <h1 class="s5dae1f0 s1cab885">How zerofi routes move a trade from quote to sale</h1>
+<p class="s2ce9566">zerofi routes separate cross-exchange transfers from three-trade loops, showing when each path fits and where fees, liquidity and transfer time change the result.</p>      <p class="s9cb68e5 sd697aad"><span class="s2782290">The Crypto Front Page Desk</span><time datetime="2026-10-23T15:15:05+00:00">Oct 23, 2026 · 15:15 UTC</time><span>4 min read</span></p>
+    </div>
+  </div>
+  <figure class="s2370039 sa12e211"><img width="1200" height="630" fetchpriority="high" class="sa6e8c2f" src="/assets/covers/how-zerofi-routes-move-a-trade-from-quote-to-sale.jpg" alt="How zerofi routes move a trade from quote to sale"></figure>
+  <div class="s2370039 sce9d8ea">
+    <div class="s3d321e5">
+      <div class="sb383994"><p>zerofi’s crypto arbitrage routes describe how a coin could be bought on one exchange and sold at a higher quoted price elsewhere, or traded through a three-step loop. Each route has a different set of moving parts: a price gap is only the starting point, while fees, available volume and any transfer between venues affect what remains. The route labels used by <a href="https://zerofi.pro/" rel="noopener">zerofi</a> make the basic sequence plain: buy, move the asset if needed, then sell. A route is a calculation to check, not a completed trade.</p>
+
+<h2>How does a cross-exchange route work?</h2>
+<p>A cross-exchange route buys the same coin on one exchange, transfers it to another, and sells it there. First, the scanner compares prices for matching trading pairs. Then it accounts for trading fees and the withdrawal cost for the coin’s network. Finally, it estimates the proceeds from selling on the second exchange and subtracts those costs to show a net result.</p>
+<p>The transfer is the part that makes this route different from a simple comparison of two prices. The buyer needs access to both exchanges, enough funds or room to trade on each, and a withdrawal network accepted by the receiving venue. A transfer may take time, and the sell price can move while the asset is in transit. Some routes show an estimated transfer time, but that estimate does not lock the price or guarantee the deposit will arrive on schedule.</p>
+<p>Choose this route when the price difference between venues appears large enough to cover the two trades and the transfer, and you can use the same asset and a supported network on both sides. Check the pair, network, withdrawal status and deposit requirements before moving funds; selecting a different network can leave a transfer unsupported.</p>
+
+<h2>What is a triangle route in zerofi?</h2>
+<p>A triangle route chains three trades into a loop, ending back in the starting asset. For example, a trader might exchange asset A for B, B for C, then C for A. If the rates and fees across those steps leave more A than the route started with, the loop shows a potential arbitrage opportunity.</p>
+<p>Unlike the cross-exchange path, a triangle can run on one exchange, where each trade uses that venue’s order books, or across more than one exchange. When an asset must move between venues, the route also has a withdrawal leg, with its fee and delay. The scanner’s distinction matters: three trades do not automatically mean three exchanges, and a route that changes exchange has more operational steps than one contained at a single venue.</p>
+<p>A triangle can fit when the balances and trading pairs are already available and the calculated edge remains after all three trading fees. It avoids waiting for an on-chain transfer when the loop stays on one exchange, but it depends on liquidity at every step. A thin middle pair can worsen the price, so a route that looks attractive at small size may not hold for a larger order.</p>
+
+<h2>How should you compare the two route types?</h2>
+<p>Compare the route’s net estimate and the work required to execute every leg. A displayed spread is the gap between quoted prices; net profit is the estimate after relevant fees. The distinction is like comparing two shop prices while counting the delivery charge before deciding where to buy.</p>
+<ul>
+<li><strong>Cross-exchange:</strong> check buy and sell prices, both trading fees, withdrawal cost, network match and transfer time.</li>
+<li><strong>Triangle on one venue:</strong> check all three pairs, each fee and the available depth along the whole loop.</li>
+<li><strong>Triangle across venues:</strong> check the same trade details, plus any asset transfer, network and deposit conditions.</li>
+<li><strong>Either route:</strong> compare the order-book size with your intended trade and account for price movement before execution.</li>
+</ul>
+<p>Order-book prices show what is available near the current quote, not necessarily what a large order will receive. A route can disappear as prices change or other traders take the available liquidity. The prudent choice for most readers is the route whose full sequence they can verify, with a net estimate that still makes sense at their intended size. If a step depends on an unavailable pair, unsupported network or balance they do not hold, the route is not executable as shown.</p>
+<p>What changes between the route types is where the work happens: one buys and transfers between venues; the other cycles through three trades, sometimes without leaving one venue. Watch the fees, order-book depth and transfer conditions on each leg as quotes update.</p></div>
+    </div>
+  </div>
+  <aside class="s2370039 s6d8a995">
+    <div class="s3d321e5 s9cfda61">
+      <h2 class="s24fad11">Related stories</h2>
+      <ul class="s17e86a8">
+<li><h3 class="s5dae1f0 s175402a"><a href="/how-a-large-crypto-swap-moves-through-a-shallow-pool/">How a large crypto swap moves through a shallow pool</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/occ-leaves-stablecoin-rewards-open-to-case-by-case-review/">OCC leaves stablecoin rewards open to case-by-case review</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/solanas-alpenglow-consensus-upgrade-is-live-on-mainnet/">Solana’s Alpenglow consensus upgrade is live on mainnet</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/three-bridge-cost-checks-before-you-move-crypto/">Three Bridge Cost Checks Before You Move Crypto</a></h3></li>      </ul>
+    </div>
+  </aside>
+</article>
+</main>
+
+<footer class="s7c6a81e">
+  <div class="s1805555">
+    <div class="sc1da3b2">
+      <p class="s164cbde">Crypto Front Page</p>
+      <nav class="sbcc75a4" aria-label="Site">
+        <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About us</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-policy/">Editorial policy</a></li>        </ul>
+      </nav>
+    </div>
+    <p class="s71cd903">Published for information only; not financial advice.</p>
+    <p class="s2f02081">© 2026 Crypto Front Page</p>
+  </div>
+</footer>
+</body>
+</html>
