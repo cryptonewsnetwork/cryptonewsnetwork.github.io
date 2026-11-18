@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en-GB" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is Shibarium a Layer 2 or a Sidechain? The Key Test</title>
+<meta name="description" content="Is Shibarium a layer 2 or a sidechain? It is a checkpointed sidechain: BONE-staked validators confirm transactions, while Ethereum records checkpoints.">
+<link rel="canonical" href="https://cryptonewsnetwork.github.io/shibariums-checkpointed-sidechain-design/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#faf7f0">
+<meta name="author" content="The Crypto Front Page Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Front Page">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Shibarium’s Checkpointed Sidechain Design">
+<meta property="og:description" content="Is Shibarium a layer 2 or a sidechain? It is a checkpointed sidechain: BONE-staked validators confirm transactions, while Ethereum records checkpoints.">
+<meta property="og:url" content="https://cryptonewsnetwork.github.io/shibariums-checkpointed-sidechain-design/">
+<meta property="og:image" content="https://cryptonewsnetwork.github.io/assets/covers/shibariums-checkpointed-sidechain-design-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shibarium’s Checkpointed Sidechain Design"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shibarium’s Checkpointed Sidechain Design">
+<meta name="twitter:description" content="Is Shibarium a layer 2 or a sidechain? It is a checkpointed sidechain: BONE-staked validators confirm transactions, while Ethereum records checkpoints.">
+<meta property="article:published_time" content="2026-11-18T03:52:34+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Azeret+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/scb93f9a0ec.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Front Page" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptonewsnetwork.github.io/#org",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptonewsnetwork.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptonewsnetwork.github.io/#website",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "inLanguage": "en-GB",
+      "description": "Crypto Front Page reports news on Bitcoin, Ethereum, stablecoins, exchanges, DeFi protocols, regulation and network upgrades across the crypto industry."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptonewsnetwork.github.io/shibariums-checkpointed-sidechain-design/#webpage",
+      "url": "https://cryptonewsnetwork.github.io/shibariums-checkpointed-sidechain-design/",
+      "name": "Is Shibarium a Layer 2 or a Sidechain? The Key Test",
+      "isPartOf": {
+        "@id": "https://cryptonewsnetwork.github.io/#website"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptonewsnetwork.github.io/shibariums-checkpointed-sidechain-design/#article",
+      "headline": "Shibarium’s Checkpointed Sidechain Design",
+      "isAccessibleForFree": true,
+      "description": "Is Shibarium a layer 2 or a sidechain? It is a checkpointed sidechain: BONE-staked validators confirm transactions, while Ethereum records checkpoints.",
+      "datePublished": "2026-11-18T03:52:34+00:00",
+      "dateModified": "2026-11-18T03:52:34+00:00",
+      "url": "https://cryptonewsnetwork.github.io/shibariums-checkpointed-sidechain-design/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptonewsnetwork.github.io/shibariums-checkpointed-sidechain-design/#webpage"
+      },
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "wordCount": 646,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/shibariums-checkpointed-sidechain-design-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/shibariums-checkpointed-sidechain-design-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/shibariums-checkpointed-sidechain-design-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptonewsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Shibarium’s Checkpointed Sidechain Design",
+          "item": "https://cryptonewsnetwork.github.io/shibariums-checkpointed-sidechain-design/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="se5d0494" href="#main">Jump to content</a>
+<header class="sff2168b">
+  <div class="s5edc9cb">
+    <div class="sb7af678">
+      <a class="see8b107" href="/">Crypto Front Page</a>
+      <p class="s05fe28a">Crypto networks, markets and policy</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<article class="sb8a55da">
+  <div class="s2370039">
+    <div class="s3d321e5 sa799cc4">
+      <h1 class="s5dae1f0 s1cab885">Shibarium’s Checkpointed Sidechain Design</h1>
+<p class="s2ce9566">Is Shibarium a layer 2 or a sidechain? It is a checkpointed sidechain: BONE-staked validators confirm transactions, while Ethereum records checkpoints.</p>      <p class="s9cb68e5 sd697aad"><span class="s2782290">The Crypto Front Page Desk</span><time datetime="2026-11-18T03:52:34+00:00">Nov 18, 2026 · 03:52 UTC</time><span>4 min read</span></p>
+    </div>
+  </div>
+  <figure class="s2370039 sa12e211"><img width="1200" height="630" fetchpriority="high" class="sa6e8c2f" src="/assets/covers/shibariums-checkpointed-sidechain-design.jpg" alt="Shibarium’s Checkpointed Sidechain Design"></figure>
+  <div class="s2370039 sce9d8ea">
+    <div class="s3d321e5">
+      <div class="sb383994"><p>Shibarium is a checkpointed sidechain: its own BONE-staked validators confirm transactions, then submit periodic checkpoints to Ethereum. It is often called a layer 2, but Ethereum records those checkpoints rather than verifying Shibarium’s transactions as it would for a rollup.</p>
+<h2>How Shibarium’s checkpoints work</h2>
+<p>A layer 2 processes transactions away from Ethereum while relying on Ethereum to enforce key parts of the chain’s security. A rollup does this by publishing transaction data to Ethereum and giving Ethereum a way to verify the resulting state. A sidechain runs on its own validator set; a connection to Ethereum does not by itself make it a rollup.</p>
+<p>Shibarium uses Bor to produce blocks and Heimdall to manage validators and checkpoints. Validators stake BONE, which is also Shibarium’s gas token. Heimdall validators sign periodic checkpoints, and Ethereum stores them. That record can help establish which Shibarium blocks were included, but Ethereum does not re-execute their transactions or decide whether each one was valid.</p>
+<p>This distinction matters when you use an app on the network. ShibaSwap is a decentralized exchange where people swap tokens, and the <a href="https://graph.org/Shiba-Swap-Fees-Ethereum-vs-Shibarium-Trade-Costs-11-16" rel="noopener">shiba swap</a> overview adds useful context about what the exchange is for. A swap on Shibarium is confirmed by Shibarium’s validators; its completion does not wait for Ethereum to verify the swap itself.</p>
+<p>Picture the same swap sent through two systems. In the first, validators process it and Ethereum checks the transaction data or proof that supports the result: that is the rollup model. In the second, validators process it on their own chain and later post a signed checkpoint to Ethereum, which records the checkpoint without checking each swap: that is the sidechain model. Shibarium follows the second path. The deciding factor is who verifies the transactions, not whether Ethereum receives a record afterward.</p>
+<p>So the practical test is simple: does Ethereum verify the chain’s transactions, or does the chain’s own validator set do that? Shibarium fits beside Polygon PoS, whose design also uses a separate proof-of-stake validator system and checkpoints to Ethereum. The shared pattern is a parallel chain with its own consensus, not a rollup inheriting Ethereum’s transaction verification.</p>
+<p>For someone swapping on ShibaSwap’s Shibarium version, the distinction describes the security assumption behind the transaction. The swap relies on Shibarium validators confirming it, and funds held on the chain depend on an honest validator majority. Ethereum checkpoints provide a record, but they do not turn that validator system into Ethereum’s own transaction enforcement.</p>
+<h2>Related questions</h2>
+<h3>Is Shibarium the same as Polygon?</h3>
+<p>Shibarium is not Polygon PoS, but it is built on the Polygon PoS stack, including Bor and Heimdall. Both use their own proof-of-stake validators and send checkpoints to Ethereum, which is why they are commonly grouped as checkpointed sidechains.</p>
+<h3>Is Shibarium safe to bridge funds to?</h3>
+<p>Bridging funds to Shibarium means relying on its validator system to process activity on the chain. Check that you understand this separate security assumption and use the official bridge interface; Ethereum does not verify Shibarium transactions as a rollup would.</p>
+<h2>Shibarium FAQ</h2>
+<h3>How long does withdrawing from Shibarium to Ethereum take?</h3>
+<p>Withdrawal time depends on the bridge route and its checkpoint or challenge process. Check the current estimate shown by the bridge before starting; there is no single timing that applies to every route.</p>
+<h3>How many validators does Shibarium have?</h3>
+<p>The active validator count can change as validators join, leave, or are selected for duties. Check a current Shibarium validator source for the live count.</p>
+<h3>Can Shibarium become a true rollup later?</h3>
+<p>It could change its architecture, but checkpoints alone do not make it a rollup. Ethereum would need to verify transaction data or proofs under a rollup design.</p>
+<h3>Does shiba swap on Shibarium use the same contracts as on Ethereum?</h3>
+<p>Do not assume the contracts are the same across networks. Verify the specific ShibaSwap deployment and contract addresses for the network you are using.</p></div>
+    </div>
+  </div>
+  <aside class="s2370039 s6d8a995">
+    <div class="s3d321e5 s9cfda61">
+      <h2 class="s24fad11">Related stories</h2>
+      <ul class="s17e86a8">
+<li><h3 class="s5dae1f0 s175402a"><a href="/doj-gets-authority-over-1-2-billion-in-binance-hack-funds/">DOJ gets authority over $1.2 billion in Binance hack funds</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/how-to-check-a-shibaswap-trade-on-etherscan/">How to Check a ShibaSwap Trade on Etherscan</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/us-authorizes-seizure-of-1-2-billion-in-binance-hack-funds/">US authorizes seizure of $1.2 billion in Binance hack funds</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/difference-between-renbridge-and-renvm-app-versus-network/">Difference between RenBridge and RenVM: app versus network</a></h3></li>      </ul>
+    </div>
+  </aside>
+</article>
+</main>
+
+<footer class="s7c6a81e">
+  <div class="s1805555">
+    <div class="sc1da3b2">
+      <p class="s164cbde">Crypto Front Page</p>
+      <nav class="sbcc75a4" aria-label="Site">
+        <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About us</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-policy/">Editorial policy</a></li>        </ul>
+      </nav>
+    </div>
+    <p class="s71cd903">Published for information only; not financial advice.</p>
+    <p class="s2f02081">© 2026 Crypto Front Page</p>
+  </div>
+</footer>
+</body>
+</html>
