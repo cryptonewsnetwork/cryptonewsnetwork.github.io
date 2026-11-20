@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-GB" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How should my app represent Ethereum-to-Sui transfer states</title>
+<meta name="description" content="Represent Ethereum-to-Sui bridge transfer states from receipts, bridge records and Sui execution; keep RPC freshness separate so recovery stays clear.">
+<link rel="canonical" href="https://cryptonewsnetwork.github.io/ethereum-to-sui-bridge-transfer-states-an-evidence-model/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#faf7f0">
+<meta name="author" content="The Crypto Front Page Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Front Page">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Ethereum-to-Sui bridge transfer states: an evidence model">
+<meta property="og:description" content="Represent Ethereum-to-Sui bridge transfer states from receipts, bridge records and Sui execution; keep RPC freshness separate so recovery stays clear.">
+<meta property="og:url" content="https://cryptonewsnetwork.github.io/ethereum-to-sui-bridge-transfer-states-an-evidence-model/">
+<meta property="og:image" content="https://cryptonewsnetwork.github.io/assets/covers/ethereum-to-sui-bridge-transfer-states-an-evidence-model-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ethereum-to-Sui bridge transfer states: an evidence model"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ethereum-to-Sui bridge transfer states: an evidence model">
+<meta name="twitter:description" content="Represent Ethereum-to-Sui bridge transfer states from receipts, bridge records and Sui execution; keep RPC freshness separate so recovery stays clear.">
+<meta property="article:published_time" content="2026-11-20T18:23:46+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Azeret+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/scb93f9a0ec.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Front Page" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptonewsnetwork.github.io/#org",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptonewsnetwork.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptonewsnetwork.github.io/#website",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "inLanguage": "en-GB",
+      "description": "Crypto Front Page reports news on Bitcoin, Ethereum, stablecoins, exchanges, DeFi protocols, regulation and network upgrades across the crypto industry."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptonewsnetwork.github.io/ethereum-to-sui-bridge-transfer-states-an-evidence-model/#webpage",
+      "url": "https://cryptonewsnetwork.github.io/ethereum-to-sui-bridge-transfer-states-an-evidence-model/",
+      "name": "How should my app represent Ethereum-to-Sui transfer states",
+      "isPartOf": {
+        "@id": "https://cryptonewsnetwork.github.io/#website"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptonewsnetwork.github.io/ethereum-to-sui-bridge-transfer-states-an-evidence-model/#article",
+      "headline": "Ethereum-to-Sui bridge transfer states: an evidence model",
+      "isAccessibleForFree": true,
+      "description": "Represent Ethereum-to-Sui bridge transfer states from receipts, bridge records and Sui execution; keep RPC freshness separate so recovery stays clear.",
+      "datePublished": "2026-11-20T18:23:46+00:00",
+      "dateModified": "2026-11-20T18:23:46+00:00",
+      "url": "https://cryptonewsnetwork.github.io/ethereum-to-sui-bridge-transfer-states-an-evidence-model/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptonewsnetwork.github.io/ethereum-to-sui-bridge-transfer-states-an-evidence-model/#webpage"
+      },
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "wordCount": 734,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/ethereum-to-sui-bridge-transfer-states-an-evidence-model-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/ethereum-to-sui-bridge-transfer-states-an-evidence-model-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/ethereum-to-sui-bridge-transfer-states-an-evidence-model-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptonewsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ethereum-to-Sui bridge transfer states: an evidence model",
+          "item": "https://cryptonewsnetwork.github.io/ethereum-to-sui-bridge-transfer-states-an-evidence-model/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="se5d0494" href="#main">Jump to content</a>
+<header class="sff2168b">
+  <div class="s5edc9cb">
+    <div class="sb7af678">
+      <a class="see8b107" href="/">Crypto Front Page</a>
+      <p class="s05fe28a">Crypto networks, markets and policy</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<article class="sb8a55da">
+  <div class="s2370039">
+    <div class="s3d321e5 sa799cc4">
+      <h1 class="s5dae1f0 s1cab885">Ethereum-to-Sui bridge transfer states: an evidence model</h1>
+<p class="s2ce9566">Represent Ethereum-to-Sui bridge transfer states from receipts, bridge records and Sui execution; keep RPC freshness separate so recovery stays clear.</p>      <p class="s9cb68e5 sd697aad"><span class="s2782290">The Crypto Front Page Desk</span><time datetime="2026-11-20T18:23:46+00:00">Nov 20, 2026 · 18:23 UTC</time><span>4 min read</span></p>
+    </div>
+  </div>
+  <figure class="s2370039 sa12e211"><img width="1200" height="630" fetchpriority="high" class="sa6e8c2f" src="/assets/covers/ethereum-to-sui-bridge-transfer-states-an-evidence-model.jpg" alt="Ethereum-to-Sui bridge transfer states: an evidence model"></figure>
+  <div class="s2370039 sce9d8ea">
+    <div class="s3d321e5">
+      <div class="sb383994"><p>Represent Ethereum-to-Sui bridge transfers as a sequence of evidence-backed stages, with a separate freshness indicator for what your app has most recently observed. Settlement crosses independent systems: an Ethereum receipt, bridge records and Sui execution describe different steps, so one generic “pending” label hides useful progress.</p>
+<h2>Move from approval to destination execution</h2>
+<p>For an ERC-20 transfer, start with the token approval: the user authorizes the bridge contract to use the chosen amount. Approval success enables the deposit, but does not mean the transfer has started. The user still needs to sign the deposit transaction.</p>
+<p>After signing, show “Source transaction pending” while the Ethereum transaction awaits a receipt. A successful receipt moves the transfer to “Source confirmed.” Keep “Confirmations remaining” separate until the receipt has the confirmation depth your app requires. Then look for matching bridge records and show “Bridge approved” when those records confirm processing. “Destination pending” means the matching Sui delivery has not yet completed.</p>
+<p>Suibridge uses a lock-and-mint process for supported assets, so the source deposit and destination delivery belong to one transfer but occur on different chains. For the receiving side, see how to <a href="https://tokentrail.pages.dev/how-to-set-up-a-sui-wallet-and-receive-bridged-tokens/" rel="noopener">set up a Sui wallet for bridged tokens</a> and find the coins. Suibridge’s destination context helps readers connect delivery to the wallet that should receive it.</p>
+<p>Mark the transfer “Complete” only after successful Sui execution effects match the bridge transfer and show delivery to the intended address. Ethereum’s receipt confirms the source transaction; Sui’s execution effects confirm the destination transaction. The distinction gives users a clear account of what changed at each step.</p>
+<h2>Keep the transfer record and observation freshness separate</h2>
+<p>Persist enough identity to reconcile evidence across retries and devices: source and destination chains, sender and recipient addresses, asset, amount, transaction hashes, source event identity and bridge message key. Use those fields to match a bridge record to the deposit and a Sui delivery to the same transfer. A hash alone identifies one transaction, while the event identity and message key help connect the transfer across systems.</p>
+<p>Store the transfer stage separately from observation freshness. The stage describes the latest verified lifecycle event. Freshness describes when your app last checked an RPC or authoritative bridge record, and whether that check succeeded. An RPC outage can make the display less current while the transfer continues processing elsewhere.</p>
+<p>For instance, say a user approves an illustrative ERC-20 amount, signs a deposit, and the Ethereum receipt arrives. Your app advances from “Source transaction pending” to “Source confirmed,” then later to “Confirmations satisfied” and “Bridge approved” as matching evidence appears. If an RPC request then fails, keep the latest verified stage and show “Last checked” with its time plus a “Status may be delayed” indicator. After a successful refresh, update the observation time and stage only if new evidence supports it. The transfer record stays the same; confidence in the display changes because the evidence is newer.</p>
+<p>When processing appears stalled, show the current stage and the time of the last observation. That gives the user a useful next step: wait or refresh, rather than treating a temporary data gap as a new transfer state.</p>
+<p>Represent exceptions as explicit states with actions tied to the evidence. A rejected wallet signature leaves the deposit unsigned; offer “Try again.” A replaced Ethereum transaction should point to the replacement hash and resume receipt tracking there. A reverted source transaction should show “Source reverted” and explain that the deposit failed, with an action to review and retry. Keep the original hashes and event details in the transfer record so support and the user can trace what happened.</p>
+<h2>How should my app show bridge progress percentage?</h2>
+<p>Use named stages instead of a percentage: elapsed time gives an unreliable measure of progress when Ethereum confirmation, bridge processing and Sui execution take different amounts of time. Pair the stage with the relevant transaction or confirmation detail.</p>
+<h2>Should my app use bridge webhooks or polling?</h2>
+<p>Reconcile webhook notifications against authoritative chain records. Polling can refresh the same evidence when notifications are missed, while the persisted transfer identity lets both paths update one record without inventing a second transfer.</p>
+<p>The model changes the display from a single spinner into a sequence users can understand: approval, source settlement, bridge processing and destination delivery. Watch the evidence for each transition and the age of your latest observation; together they show both where the transfer stands and how current that view is.</p></div>
+    </div>
+  </div>
+  <aside class="s2370039 s6d8a995">
+    <div class="s3d321e5 s9cfda61">
+      <h2 class="s24fad11">Related stories</h2>
+      <ul class="s17e86a8">
+<li><h3 class="s5dae1f0 s175402a"><a href="/us-court-orders-target-1-2-billion-from-binance-hack/">US court orders target $1.2 billion from Binance hack</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/risks-of-restaking-eth-compared-to-regular-staking-what-changes/">Risks of restaking ETH compared to regular staking: what changes</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/teleswap-locker-risk-vs-smart-contract-risk-what-to-manage-first/">TeleSwap locker risk vs smart contract risk: what to manage first</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/how-to-restake-steth-with-a-hardware-wallet/">How to Restake stETH With a Hardware Wallet</a></h3></li>      </ul>
+    </div>
+  </aside>
+</article>
+</main>
+
+<footer class="s7c6a81e">
+  <div class="s1805555">
+    <div class="sc1da3b2">
+      <p class="s164cbde">Crypto Front Page</p>
+      <nav class="sbcc75a4" aria-label="Site">
+        <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About us</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-policy/">Editorial policy</a></li>        </ul>
+      </nav>
+    </div>
+    <p class="s71cd903">Published for information only; not financial advice.</p>
+    <p class="s2f02081">© 2026 Crypto Front Page</p>
+  </div>
+</footer>
+</body>
+</html>
