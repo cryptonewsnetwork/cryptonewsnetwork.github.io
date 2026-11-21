@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en-GB" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where are token approvals stored? Inside token contracts</title>
+<meta name="description" content="Where are token approvals stored? ERC-20 allowances live in token contracts, while NFT approvals live in collection contracts, where transfer permissions are checked.">
+<link rel="canonical" href="https://cryptonewsnetwork.github.io/where-erc-20-and-nft-token-approvals-are-stored/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#faf7f0">
+<meta name="author" content="The Crypto Front Page Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Front Page">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Where ERC-20 and NFT Token Approvals Are Stored">
+<meta property="og:description" content="Where are token approvals stored? ERC-20 allowances live in token contracts, while NFT approvals live in collection contracts, where transfer permissions are checked.">
+<meta property="og:url" content="https://cryptonewsnetwork.github.io/where-erc-20-and-nft-token-approvals-are-stored/">
+<meta property="og:image" content="https://cryptonewsnetwork.github.io/assets/covers/where-erc-20-and-nft-token-approvals-are-stored-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Where ERC-20 and NFT Token Approvals Are Stored"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Where ERC-20 and NFT Token Approvals Are Stored">
+<meta name="twitter:description" content="Where are token approvals stored? ERC-20 allowances live in token contracts, while NFT approvals live in collection contracts, where transfer permissions are checked.">
+<meta property="article:published_time" content="2026-11-21T13:02:32+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Azeret+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/scb93f9a0ec.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Front Page" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptonewsnetwork.github.io/#org",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptonewsnetwork.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptonewsnetwork.github.io/#website",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "inLanguage": "en-GB",
+      "description": "Crypto Front Page reports news on Bitcoin, Ethereum, stablecoins, exchanges, DeFi protocols, regulation and network upgrades across the crypto industry."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptonewsnetwork.github.io/where-erc-20-and-nft-token-approvals-are-stored/#webpage",
+      "url": "https://cryptonewsnetwork.github.io/where-erc-20-and-nft-token-approvals-are-stored/",
+      "name": "Where are token approvals stored? Inside token contracts",
+      "isPartOf": {
+        "@id": "https://cryptonewsnetwork.github.io/#website"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptonewsnetwork.github.io/where-erc-20-and-nft-token-approvals-are-stored/#article",
+      "headline": "Where ERC-20 and NFT Token Approvals Are Stored",
+      "isAccessibleForFree": true,
+      "description": "Where are token approvals stored? ERC-20 allowances live in token contracts, while NFT approvals live in collection contracts, where transfer permissions are checked.",
+      "datePublished": "2026-11-21T13:02:32+00:00",
+      "dateModified": "2026-11-21T13:02:32+00:00",
+      "url": "https://cryptonewsnetwork.github.io/where-erc-20-and-nft-token-approvals-are-stored/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptonewsnetwork.github.io/where-erc-20-and-nft-token-approvals-are-stored/#webpage"
+      },
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "wordCount": 601,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/where-erc-20-and-nft-token-approvals-are-stored-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/where-erc-20-and-nft-token-approvals-are-stored-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/where-erc-20-and-nft-token-approvals-are-stored-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptonewsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Where ERC-20 and NFT Token Approvals Are Stored",
+          "item": "https://cryptonewsnetwork.github.io/where-erc-20-and-nft-token-approvals-are-stored/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="se5d0494" href="#main">Jump to content</a>
+<header class="sff2168b">
+  <div class="s5edc9cb">
+    <div class="sb7af678">
+      <a class="see8b107" href="/">Crypto Front Page</a>
+      <p class="s05fe28a">Crypto networks, markets and policy</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<article class="sb8a55da">
+  <div class="s2370039">
+    <div class="s3d321e5 sa799cc4">
+      <h1 class="s5dae1f0 s1cab885">Where ERC-20 and NFT Token Approvals Are Stored</h1>
+<p class="s2ce9566">Where are token approvals stored? ERC-20 allowances live in token contracts, while NFT approvals live in collection contracts, where transfer permissions are checked.</p>      <p class="s9cb68e5 sd697aad"><span class="s2782290">The Crypto Front Page Desk</span><time datetime="2026-11-21T13:02:32+00:00">Nov 21, 2026 · 13:02 UTC</time><span>4 min read</span></p>
+    </div>
+  </div>
+  <figure class="s2370039 sa12e211"><img width="1200" height="630" fetchpriority="high" class="sa6e8c2f" src="/assets/covers/where-erc-20-and-nft-token-approvals-are-stored.jpg" alt="Where ERC-20 and NFT Token Approvals Are Stored"></figure>
+  <div class="s2370039 sce9d8ea">
+    <div class="s3d321e5">
+      <div class="sb383994"><p>A wallet owner checking token permissions will find ERC-20 allowances and ERC-721 approvals in the relevant token contract’s storage, because that contract checks those records when it processes a transfer.</p>
+<p>That means approving a DEX to spend USDC writes an allowance in the USDC contract, not in the wallet or the DEX. The wallet signs the approval transaction, and the token contract records the permission. For a closer look at where those records come from and how they can be managed, <a href="https://paragraph.com/@owofadanuvoj67/how-does-revokecash-find-my-approvals-your-wallet-s-live" rel="noopener">revokecash</a> covers token approval management.</p>
+<h2>ERC-20 allowances live in the token contract</h2>
+<p>An ERC-20 contract records allowances in a mapping from an owner address to a spender address and an amount: mapping(owner => mapping(spender => amount)). The owner is the wallet that grants permission; the spender is the address allowed to use some of its tokens.</p>
+<p>Here is the sequence for a USDC approval to a DEX:</p>
+<ol>
+<li>The wallet sends an approval transaction to the USDC contract, naming the DEX’s spender address and an allowance amount.</li>
+<li>The USDC contract stores that amount against the owner and spender.</li>
+<li>When the DEX later requests a transfer using transferFrom, the USDC contract checks the allowance and processes the transfer according to its rules.</li>
+</ol>
+<p>The contract that holds the tokens also holds the permission because it is the one that enforces transfers. A wallet can sign a transaction and display permission information, but the allowance itself belongs to the token contract’s records. The DEX can use the permission, but its own storage is not where the USDC allowance is recorded.</p>
+<h2>NFT approvals use two records in the collection contract</h2>
+<p>An ERC-721 collection contract stores both individual token approvals and approvals for an operator to manage all of an owner’s tokens in that collection. The collection contract checks the relevant approval when a transfer is requested.</p>
+<p>A per-token approval names an address that may transfer one specific NFT. The contract exposes that record through getApproved. An operator approval gives an address broader authority over the owner’s NFTs in that collection, and isApprovedForAll reports whether that permission is set.</p>
+<p>These two permissions have different lifetimes. When an NFT with a per-token approval is transferred, the collection contract clears that approval automatically. The old permission applies to the specific token under its previous ownership, so clearing it prevents that approval from carrying over to the next holder.</p>
+<p>An operator approval works differently: it stays in place when one NFT moves. It applies to the owner’s collection-wide relationship with the operator, so it remains until the owner revokes it. Transferring one NFT does not, by itself, cancel that broader permission.</p>
+<p>Say a collector approves a marketplace to handle one particular NFT, then the NFT is transferred. Its per-token approval is cleared by the collection contract. If the collector instead granted the marketplace operator status for the collection, that approval remains active after the transfer until revoked.</p>
+<h2>Approval tools read the contracts that enforce permission</h2>
+<p>Because the records sit in token contracts, an approval-management tool needs to read the relevant contract records to show the permissions associated with a wallet. revokecash reads these entries and resets approvals by calling the token contracts, where the permissions are stored and enforced.</p>
+<p>The key distinction is the contract and the scope of permission: an ERC-20 allowance is attached to an owner and spender in the token contract; an ERC-721 approval is in the collection contract, either for one token or for all of an owner’s tokens. For NFTs, watch whether a permission is token-specific or operator-wide, since a transfer clears the former but leaves the latter in place until it is revoked.</p></div>
+    </div>
+  </div>
+  <aside class="s2370039 s6d8a995">
+    <div class="s3d321e5 s9cfda61">
+      <h2 class="s24fad11">Related stories</h2>
+      <ul class="s17e86a8">
+<li><h3 class="s5dae1f0 s175402a"><a href="/how-to-check-a-bitcoin-bridges-collateralization-before-using-it/">How to check a Bitcoin bridge’s collateralization before using it</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/a-first-crypto-bridge-transfer-step-by-step/">A First Crypto Bridge Transfer, Step by Step</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/should-i-use-hardware-for-regular-syncswap-swaps/">Should I use hardware for regular SyncSwap swaps?</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/ethereum-to-sui-bridge-transfer-states-an-evidence-model/">Ethereum-to-Sui bridge transfer states: an evidence model</a></h3></li>      </ul>
+    </div>
+  </aside>
+</article>
+</main>
+
+<footer class="s7c6a81e">
+  <div class="s1805555">
+    <div class="sc1da3b2">
+      <p class="s164cbde">Crypto Front Page</p>
+      <nav class="sbcc75a4" aria-label="Site">
+        <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About us</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-policy/">Editorial policy</a></li>        </ul>
+      </nav>
+    </div>
+    <p class="s71cd903">Published for information only; not financial advice.</p>
+    <p class="s2f02081">© 2026 Crypto Front Page</p>
+  </div>
+</footer>
+</body>
+</html>
