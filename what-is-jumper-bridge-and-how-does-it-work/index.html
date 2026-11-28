@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-GB" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is Jumper bridge used for? Route mechanics</title>
+<meta name="description" content="What is Jumper bridge used for? It routes token transfers and swaps across chains through LI.FI, whose Diamond contract executes the selected route.">
+<link rel="canonical" href="https://cryptonewsnetwork.github.io/what-is-jumper-bridge-and-how-does-it-work/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#faf7f0">
+<meta name="author" content="The Crypto Front Page Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto Front Page">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="What Is Jumper Bridge, and How Does It Work?">
+<meta property="og:description" content="What is Jumper bridge used for? It routes token transfers and swaps across chains through LI.FI, whose Diamond contract executes the selected route.">
+<meta property="og:url" content="https://cryptonewsnetwork.github.io/what-is-jumper-bridge-and-how-does-it-work/">
+<meta property="og:image" content="https://cryptonewsnetwork.github.io/assets/covers/what-is-jumper-bridge-and-how-does-it-work-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="What Is Jumper Bridge, and How Does It Work?"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Is Jumper Bridge, and How Does It Work?">
+<meta name="twitter:description" content="What is Jumper bridge used for? It routes token transfers and swaps across chains through LI.FI, whose Diamond contract executes the selected route.">
+<meta property="article:published_time" content="2026-11-28T06:40:48+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Azeret+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/scb93f9a0ec.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Crypto Front Page" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cryptonewsnetwork.github.io/#org",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptonewsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptonewsnetwork.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptonewsnetwork.github.io/#website",
+      "name": "Crypto Front Page",
+      "url": "https://cryptonewsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "inLanguage": "en-GB",
+      "description": "Crypto Front Page reports news on Bitcoin, Ethereum, stablecoins, exchanges, DeFi protocols, regulation and network upgrades across the crypto industry."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptonewsnetwork.github.io/what-is-jumper-bridge-and-how-does-it-work/#webpage",
+      "url": "https://cryptonewsnetwork.github.io/what-is-jumper-bridge-and-how-does-it-work/",
+      "name": "What is Jumper bridge used for? Route mechanics",
+      "isPartOf": {
+        "@id": "https://cryptonewsnetwork.github.io/#website"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptonewsnetwork.github.io/what-is-jumper-bridge-and-how-does-it-work/#article",
+      "headline": "What Is Jumper Bridge, and How Does It Work?",
+      "isAccessibleForFree": true,
+      "description": "What is Jumper bridge used for? It routes token transfers and swaps across chains through LI.FI, whose Diamond contract executes the selected route.",
+      "datePublished": "2026-11-28T06:40:48+00:00",
+      "dateModified": "2026-11-28T06:40:48+00:00",
+      "url": "https://cryptonewsnetwork.github.io/what-is-jumper-bridge-and-how-does-it-work/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptonewsnetwork.github.io/what-is-jumper-bridge-and-how-does-it-work/#webpage"
+      },
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptonewsnetwork.github.io/#org"
+      },
+      "wordCount": 527,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/what-is-jumper-bridge-and-how-does-it-work-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/what-is-jumper-bridge-and-how-does-it-work-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptonewsnetwork.github.io/assets/covers/what-is-jumper-bridge-and-how-does-it-work-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptonewsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "What Is Jumper Bridge, and How Does It Work?",
+          "item": "https://cryptonewsnetwork.github.io/what-is-jumper-bridge-and-how-does-it-work/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="se5d0494" href="#main">Jump to content</a>
+<header class="sff2168b">
+  <div class="s5edc9cb">
+    <div class="sb7af678">
+      <a class="see8b107" href="/">Crypto Front Page</a>
+      <p class="s05fe28a">Crypto networks, markets and policy</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<article class="sb8a55da">
+  <div class="s2370039">
+    <div class="s3d321e5 sa799cc4">
+      <h1 class="s5dae1f0 s1cab885">What Is Jumper Bridge, and How Does It Work?</h1>
+<p class="s2ce9566">What is Jumper bridge used for? It routes token transfers and swaps across chains through LI.FI, whose Diamond contract executes the selected route.</p>      <p class="s9cb68e5 sd697aad"><span class="s2782290">The Crypto Front Page Desk</span><time datetime="2026-11-28T06:40:48+00:00">Nov 28, 2026 · 06:40 UTC</time><span>3 min read</span></p>
+    </div>
+  </div>
+  <figure class="s2370039 sa12e211"><img width="1200" height="630" fetchpriority="high" class="sa6e8c2f" src="/assets/covers/what-is-jumper-bridge-and-how-does-it-work.jpg" alt="What Is Jumper Bridge, and How Does It Work?"></figure>
+  <div class="s2370039 sce9d8ea">
+    <div class="s3d321e5">
+      <div class="sb383994"><p>Jumper bridge is used to move or swap tokens between blockchains by routing a transaction through bridges and decentralized exchanges. At <a href="https://jumperbridge.xyz" rel="noopener">Jumper bridge</a>, LI.FI assembles the route that carries out that transfer. The key detail for a DeFi user is that the LI.FI Diamond contract is the on-chain entry point for execution.</p>
+<p>Take a cross-chain swap from ETH on Base to SOL on Solana. LI.FI’s routing API and SDK can combine a swap on the source chain, a bridge transfer, and a swap on the destination chain into one route. Same-asset bridging, such as moving a token between networks, is another use; so is a swap that stays on one chain.</p>
+<h2>LI.FI builds a route, then the Diamond executes it</h2>
+<p>LI.FI builds a route by combining bridge and DEX tools into ordered steps. Its API returns ranked route options, and each step identifies the bridge or exchange tool it uses. The user can compare the proposed routes before submitting one.</p>
+<p>For the Base-to-Solana case, a route might name a DEX for the source-chain swap, a bridge such as Across or Stargate for the cross-chain transfer, and a destination swap. Those names describe possible route tools; the returned steps show which tools a particular route uses. Across, for instance, uses relayers that deliver tokens on the destination chain after a user initiates a transfer on the source chain. <a href="https://legacy.docs.across.to/introduction/actors" rel="nofollow noopener">Across’s documentation</a> describes that relayer role.</p>
+<p>Once the route is selected, the wallet submits its transaction to the LI.FI Diamond contract. The Diamond dispatches calls to the relevant bridge or DEX facets, which contain the tool-specific logic. EIP-2535 describes this pattern: a Diamond contract routes function calls to facets, while keeping a single contract address as the entry point. <a href="https://eips.ethereum.org/EIPS/eip-2535" rel="nofollow noopener">EIP-2535</a> defines the Diamond structure, and <a href="https://github.com/lifinance/contracts" rel="nofollow noopener">LI.FI’s contract documentation</a> describes its use of the pattern.</p>
+<p>Think of the Diamond as a building’s reception desk: it directs each request to the right specialist department. The analogy stops at dispatch; the contract is executing blockchain calls, not passing messages between people.</p>
+<p>The route’s output is the requested token in the destination wallet. The bridge and exchange calls are composed into the route, but each step still depends on the named tool and its on-chain execution.</p>
+<h2>Who runs Jumper bridge?</h2>
+<p>Jumper bridge is built on LI.FI’s routing API and SDK, while LI.FI’s Diamond contract provides the on-chain execution entry point. The route itself can call separate bridge and DEX protocols, so the Diamond coordinates the calls rather than replacing those tools.</p>
+<h2>Can Jumper bridge swap on a single chain?</h2>
+<p>Yes, Jumper bridging can include same-chain swaps as well as cross-chain transfers. A same-chain swap uses the route’s exchange steps without a bridge transfer; a cross-chain swap can combine exchange steps with a bridge step.</p>
+<p>For an ERC-20 route that requires an allowance on an EVM source chain, review the approval address shown in the transaction: it should identify the LI.FI Diamond contract that will execute the route. That is the allowance to review or revoke afterwards. The bridge named in a route may be Across, Stargate, Circle CCTP, or another tool; the approval to inspect is the Diamond address shown in the approval.</p></div>
+    </div>
+  </div>
+  <aside class="s2370039 s6d8a995">
+    <div class="s3d321e5 s9cfda61">
+      <h2 class="s24fad11">Related stories</h2>
+      <ul class="s17e86a8">
+<li><h3 class="s5dae1f0 s175402a"><a href="/arbitrum-to-ethereum-official-bridge-or-fast-bridge/">Arbitrum to Ethereum: official bridge or fast bridge?</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/how-to-respond-after-a-fake-site-drains-your-wallet/">How to Respond After a Fake Site Drains Your Wallet</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/yield-optimizer-vs-aggregator-who-picks-the-protocol/">Yield optimizer vs aggregator: who picks the protocol?</a></h3></li><li><h3 class="s5dae1f0 s175402a"><a href="/curated-lending-vault-vs-single-market-choose-your-route/">Curated lending vault vs single market: choose your route</a></h3></li>      </ul>
+    </div>
+  </aside>
+</article>
+</main>
+
+<footer class="s7c6a81e">
+  <div class="s1805555">
+    <div class="sc1da3b2">
+      <p class="s164cbde">Crypto Front Page</p>
+      <nav class="sbcc75a4" aria-label="Site">
+        <ul>
+<li><a href="/">Front page</a></li><li><a href="/archive/">All articles</a></li><li><a href="/about/">About us</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-policy/">Editorial policy</a></li>        </ul>
+      </nav>
+    </div>
+    <p class="s71cd903">Published for information only; not financial advice.</p>
+    <p class="s2f02081">© 2026 Crypto Front Page</p>
+  </div>
+</footer>
+</body>
+</html>
